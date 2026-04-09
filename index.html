@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mu Alpha Theta Trainer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Mu Alpha Theta Trainer</h1>
+    </nav>
+
+    <div class="container">
+        
+        <section id="home-sec" class="view-section active">
+            <div class="card center-content">
+                <h2>Welcome to Competition Math Prep</h2>
+                <p>Sharpen your skills with competition-style questions across multiple divisions.</p>
+                <button id="btn-to-setup" class="btn-primary btn-large">Start Training</button>
+            </div>
+        </section>
+
+        <section id="setup-sec" class="view-section hidden">
+            <div class="card center-content">
+                <h2>Configure Your Training</h2>
+                
+                <div class="form-group">
+                    <label for="division-select">Select Division:</label>
+                    <select id="division-select" class="input-select">
+                        <option value="Algebra 1">Algebra 1</option>
+                        <option value="Geometry">Geometry</option>
+                        <option value="Algebra 2">Algebra 2</option>
+                        <option value="Precalculus">Precalculus</option>
+                        <option value="Calculus">Calculus</option>
+                        <option value="Statistics">Statistics</option>
+                    </select>
+                </div>
+
+                <div class="form-group toggle-group">
+                    <label for="timer-toggle">Enable 2-Minute Timer:</label>
+                    <label class="switch">
+                        <input type="checkbox" id="timer-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <button id="btn-start-quiz" class="btn-primary">Start Quiz</button>
+            </div>
+        </section>
+
+        <section id="quiz-sec" class="view-section hidden">
+            <div class="quiz-header">
+                <span id="quiz-division-label" class="badge">Algebra 1</span>
+                <span id="quiz-timer" class="timer hidden">02:00</span>
+            </div>
+
+            <div class="card">
+                <h3 id="question-number">Question 1</h3>
+                <p id="question-text">Loading question...</p>
+                
+                <div id="options-container" class="options-grid">
+                    </div>
+
+                <div id="feedback-container" class="feedback-box hidden">
+                    <h4 id="feedback-title">Correct!</h4>
+                    <p id="feedback-correct-ans"><strong>Answer:</strong> </p>
+                    <div class="explanation">
+                        <p id="feedback-explanation">Explanation goes here.</p>
+                    </div>
+                </div>
+
+                <div class="quiz-actions">
+                    <button id="btn-submit" class="btn-primary">Submit</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="results-sec" class="view-section hidden">
+            <div class="card center-content">
+                <h2>Training Complete!</h2>
+                <div class="score-display">
+                    <span id="final-score" class="score-text">0 / 3</span>
+                    <span id="final-accuracy" class="accuracy-text">0% Accuracy</span>
+                </div>
+                <div class="button-group">
+                    <button id="btn-retry" class="btn-primary">Retry Division</button>
+                    <button id="btn-home" class="btn-secondary">Back to Home</button>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
