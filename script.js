@@ -36,6 +36,36 @@ const questionsDatabase = {
       options: ["−3", "1", "3", "−5"],
       answer: 0,
       explanation: "f(3) = 2(3) − 5 = 1, then f(1) = 2(1) − 5 = −3."
+    },
+    {
+      question: "What is the product of all solutions to |2x − 3| = 7?",
+      options: ["−10", "10", "−3", "3"],
+      answer: 0,
+      explanation: "The equation splits into 2x − 3 = 7 (x = 5) and 2x − 3 = −7 (x = −2). The product is 5 · (−2) = −10."
+    },
+    {
+      question: "What is the slope of the line through (1, 2) and (5, 10)?",
+      options: ["2", "1/2", "3", "4"],
+      answer: 0,
+      explanation: "Slope = (10 − 2)/(5 − 1) = 8/4 = 2."
+    },
+    {
+      question: "If 3ˣ = 81, what is x?",
+      options: ["4", "3", "27", "9"],
+      answer: 0,
+      explanation: "Since 3⁴ = 81, x = 4."
+    },
+    {
+      question: "Factor completely: x² − 5x − 14.",
+      options: ["(x − 7)(x + 2)", "(x + 7)(x − 2)", "(x − 7)(x − 2)", "(x + 7)(x + 2)"],
+      answer: 0,
+      explanation: "Find two numbers that multiply to −14 and add to −5: −7 and +2. So x² − 5x − 14 = (x − 7)(x + 2)."
+    },
+    {
+      question: "Simplify (x² − 9)/(x − 3) for x ≠ 3.",
+      options: ["x + 3", "x − 3", "x² − 3", "3"],
+      answer: 0,
+      explanation: "The numerator factors as (x − 3)(x + 3). Cancelling (x − 3) leaves x + 3."
     }
   ],
   "Geometry": [
@@ -68,6 +98,36 @@ const questionsDatabase = {
       options: ["12π", "6π", "18π", "36π"],
       answer: 0,
       explanation: "Area πr² = 36π gives r = 6. Circumference = 2πr = 12π."
+    },
+    {
+      question: "What is the length of the diagonal of a square with side length 6?",
+      options: ["6√2", "12", "6", "36"],
+      answer: 0,
+      explanation: "The diagonal of a square is side · √2 = 6√2."
+    },
+    {
+      question: "A triangle has angles in the ratio 2 : 3 : 4. What is the largest angle?",
+      options: ["80°", "90°", "60°", "100°"],
+      answer: 0,
+      explanation: "The parts sum to 9, and the angles sum to 180°, so each part is 20°. The largest angle is 4 · 20° = 80°."
+    },
+    {
+      question: "What is the area of an equilateral triangle with side length 4?",
+      options: ["4√3", "8√3", "16", "4"],
+      answer: 0,
+      explanation: "Area = (√3/4)·s² = (√3/4)·16 = 4√3."
+    },
+    {
+      question: "What is the volume of a sphere with radius 3?",
+      options: ["36π", "27π", "12π", "9π"],
+      answer: 0,
+      explanation: "Volume = (4/3)πr³ = (4/3)π·27 = 36π."
+    },
+    {
+      question: "An inscribed angle in a circle subtends an arc of 100°. What is the angle's measure?",
+      options: ["50°", "100°", "200°", "25°"],
+      answer: 0,
+      explanation: "An inscribed angle is half its intercepted arc: 100°/2 = 50°."
     }
   ],
   "Algebra 2": [
@@ -100,6 +160,36 @@ const questionsDatabase = {
       options: ["0", "1", "2", "Infinitely many"],
       answer: 0,
       explanation: "The discriminant is b² − 4ac = 4 − 20 = −16 < 0, so there are no real solutions."
+    },
+    {
+      question: "What is the discriminant of 2x² + 3x − 5?",
+      options: ["49", "29", "−31", "9"],
+      answer: 0,
+      explanation: "Discriminant = b² − 4ac = 3² − 4(2)(−5) = 9 + 40 = 49."
+    },
+    {
+      question: "What is the remainder when x³ − 2x² + 3x − 5 is divided by (x − 2)?",
+      options: ["1", "−1", "5", "0"],
+      answer: 0,
+      explanation: "By the Remainder Theorem, evaluate at x = 2: 8 − 8 + 6 − 5 = 1."
+    },
+    {
+      question: "Solve for x: 2^(x + 1) = 32.",
+      options: ["4", "5", "16", "3"],
+      answer: 0,
+      explanation: "Since 32 = 2⁵, we need x + 1 = 5, so x = 4."
+    },
+    {
+      question: "What are the solutions to x² = −16 over the complex numbers?",
+      options: ["±4i", "±4", "±16i", "±2i"],
+      answer: 0,
+      explanation: "x = ±√(−16) = ±4i, since i² = −1."
+    },
+    {
+      question: "What is the sum of the first 20 positive integers?",
+      options: ["210", "200", "220", "190"],
+      answer: 0,
+      explanation: "Using n(n + 1)/2 = 20 · 21 / 2 = 210."
     }
   ],
   "Precalculus": [
@@ -132,6 +222,36 @@ const questionsDatabase = {
       options: ["1/2", "√3/2", "√2/2", "1"],
       answer: 0,
       explanation: "cos(π/3) = cos(60°) = 1/2."
+    },
+    {
+      question: "What is tan(π/4)?",
+      options: ["1", "√3", "√3/3", "0"],
+      answer: 0,
+      explanation: "tan(π/4) = sin(π/4)/cos(π/4) = (√2/2)/(√2/2) = 1."
+    },
+    {
+      question: "Find the magnitude of the vector ⟨3, 4⟩.",
+      options: ["5", "7", "25", "1"],
+      answer: 0,
+      explanation: "Magnitude = √(3² + 4²) = √25 = 5."
+    },
+    {
+      question: "What is the value of log₃(27)?",
+      options: ["3", "9", "27", "1/3"],
+      answer: 0,
+      explanation: "Since 3³ = 27, log₃(27) = 3."
+    },
+    {
+      question: "What is the horizontal asymptote of f(x) = (2x² + 1)/(x² − 3)?",
+      options: ["y = 2", "y = 0", "y = 1", "None"],
+      answer: 0,
+      explanation: "The numerator and denominator have equal degree, so the asymptote is the ratio of leading coefficients: y = 2/1 = 2."
+    },
+    {
+      question: "Convert 5π/6 radians to degrees.",
+      options: ["150°", "120°", "135°", "210°"],
+      answer: 0,
+      explanation: "Multiply by 180°/π: (5π/6)(180/π) = 150°."
     }
   ],
   "Calculus": [
@@ -164,6 +284,36 @@ const questionsDatabase = {
       options: ["12", "8", "6", "3"],
       answer: 0,
       explanation: "y′ = 3x². At x = 2, y′ = 3(4) = 12."
+    },
+    {
+      question: "What is the derivative of sin(x)?",
+      options: ["cos(x)", "−cos(x)", "−sin(x)", "sec²(x)"],
+      answer: 0,
+      explanation: "d/dx sin(x) = cos(x)."
+    },
+    {
+      question: "Evaluate the indefinite integral ∫ 2x dx.",
+      options: ["x² + C", "2 + C", "x²/2 + C", "2x² + C"],
+      answer: 0,
+      explanation: "The antiderivative of 2x is x², plus a constant of integration: x² + C."
+    },
+    {
+      question: "Find lim(x→∞) (3x² + 2)/(x² − 1).",
+      options: ["3", "0", "∞", "1"],
+      answer: 0,
+      explanation: "For equal-degree polynomials, the limit is the ratio of leading coefficients: 3/1 = 3."
+    },
+    {
+      question: "What is the second derivative of f(x) = x⁴?",
+      options: ["12x²", "4x³", "24x", "x⁴"],
+      answer: 0,
+      explanation: "f′(x) = 4x³ and f″(x) = 12x²."
+    },
+    {
+      question: "At what x-value does f(x) = x² − 6x + 5 have a critical point?",
+      options: ["3", "5", "1", "6"],
+      answer: 0,
+      explanation: "Set f′(x) = 2x − 6 = 0, giving x = 3."
     }
   ],
   "Statistics": [
@@ -196,6 +346,36 @@ const questionsDatabase = {
       options: ["35", "21", "210", "42"],
       answer: 0,
       explanation: "This is a combination: C(7, 3) = 7! / (3!·4!) = 35."
+    },
+    {
+      question: "What is the mean of 4, 8, 15, 16, 23, 42?",
+      options: ["18", "16", "20", "15"],
+      answer: 0,
+      explanation: "The sum is 108, and 108 / 6 = 18."
+    },
+    {
+      question: "In how many ways can 5 people be arranged in a row?",
+      options: ["120", "25", "60", "20"],
+      answer: 0,
+      explanation: "This is 5! = 5 · 4 · 3 · 2 · 1 = 120."
+    },
+    {
+      question: "A fair coin is flipped 3 times. What is the probability of exactly 2 heads?",
+      options: ["3/8", "1/4", "1/2", "1/8"],
+      answer: 0,
+      explanation: "There are C(3, 2) = 3 favorable outcomes out of 2³ = 8, so the probability is 3/8."
+    },
+    {
+      question: "What is the mode of 2, 3, 3, 5, 7, 7, 7, 9?",
+      options: ["7", "3", "5", "2"],
+      answer: 0,
+      explanation: "The mode is the most frequent value: 7 appears three times."
+    },
+    {
+      question: "Two cards are drawn without replacement from a standard 52-card deck. What is the probability both are aces?",
+      options: ["1/221", "1/169", "1/13", "1/26"],
+      answer: 0,
+      explanation: "P = (4/52)(3/51) = (1/13)(1/17) = 1/221."
     }
   ]
 };
@@ -213,6 +393,7 @@ let missed = [];             // review log of wrong answers
 let timeRemaining = 120;
 let timerInterval = null;
 const TIME_LIMIT = 120;
+const QUESTIONS_PER_ROUND = 5;   // pull this many from each division's pool
 
 // --- DOM Elements ---
 const views = {
@@ -291,7 +472,8 @@ document.addEventListener("keydown", (e) => {
 
 // --- Core Logic ---
 function startQuiz() {
-  currentQuestions = shuffle(questionsDatabase[currentDivision]);
+  // Shuffle the full pool, then take a random subset for this round.
+  currentQuestions = shuffle(questionsDatabase[currentDivision]).slice(0, QUESTIONS_PER_ROUND);
   questionIndex = 0;
   score = 0;
   missed = [];
