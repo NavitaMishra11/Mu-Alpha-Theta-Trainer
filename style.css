@@ -6,17 +6,17 @@
 
 :root {
   /* Ink & paper */
-  --ink:        #16183A;
-  --ink-soft:   #4A4D75;
-  --ink-faint:  #8A8DAE;
-  --paper:      #F4F6FB;
+  --ink:        #211A33;
+  --ink-soft:   #574B6E;
+  --ink-faint:  #8B82A3;
+  --paper:      #FBFAFF;
   --card:       #FFFFFF;
-  --line:       #E3E5F1;
-  --grid:       rgba(67, 56, 202, 0.055);
+  --line:       #EAE4F6;
+  --grid:       rgba(124, 58, 237, 0.05);
 
   /* Accents */
-  --primary:      #4338CA;
-  --primary-dark: #362CA8;
+  --primary:      #7C3AED;
+  --primary-dark: #6D28D9;
   --amber:        #E08A00;
 
   /* Feedback */
@@ -132,7 +132,7 @@ body {
 .btn-primary {
   background: var(--primary);
   color: #fff;
-  box-shadow: 0 6px 16px -6px rgba(67, 56, 202, 0.6);
+  box-shadow: 0 6px 16px -6px rgba(124, 58, 237, 0.55);
 }
 .btn-primary:hover:not(:disabled)  { background: var(--primary-dark); transform: translateY(-1px); }
 .btn-primary:active:not(:disabled) { transform: translateY(0); }
@@ -217,8 +217,8 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--primary);
-  background: #EEF0FE;
-  border: 1px solid #D9DCFB;
+  background: #F3ECFE;
+  border: 1px solid #E4D6FB;
   padding: 6px 12px;
   border-radius: 999px;
 }
@@ -308,7 +308,7 @@ body {
   border: 1px solid var(--line);
 }
 .option-btn:hover:not(:disabled) { border-color: var(--primary); transform: translateY(-1px); }
-.option-btn.selected { border-color: var(--primary); background: #F3F3FE; }
+.option-btn.selected { border-color: var(--primary); background: #F6F0FE; }
 .option-btn.selected::before { background: var(--primary); color: #fff; border-color: var(--primary); }
 .option-btn:disabled { cursor: default; }
 
@@ -428,6 +428,16 @@ body {
   .score-text { font-size: 2.4rem; }
   .navbar .tagline { display: none; }
 }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-faint);
+  padding: 8px 20px 40px;
+}
+.site-footer strong { color: var(--primary); font-weight: 600; }
 
 /* ---------- Accessibility ---------- */
 :focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
