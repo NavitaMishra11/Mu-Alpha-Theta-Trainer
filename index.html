@@ -1,97 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mu Alpha Theta Trainer</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A competition-math practice trainer with timed drills across six divisions, from Algebra 1 to Calculus.">
+  <title>Mu Alpha Theta Trainer</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <h1>Mu Alpha Theta Trainer</h1>
-    </nav>
+  <nav class="navbar">
+    <h1>Mu Alpha Theta Trainer</h1>
+    <span class="tagline">Competition Math Prep</span>
+  </nav>
 
-    <div class="container">
-        
-        <section id="home-sec" class="view-section active">
-            <div class="card center-content">
-                <h2>Welcome to Competition Math Prep</h2>
-                <p>Sharpen your skills with competition-style questions across multiple divisions.</p>
-                <button id="btn-to-setup" class="btn-primary btn-large">Start Training</button>
-            </div>
-        </section>
+  <main class="container">
 
-        <section id="setup-sec" class="view-section hidden">
-            <div class="card center-content">
-                <h2>Configure Your Training</h2>
-                
-                <div class="form-group">
-                    <label for="division-select">Select Division:</label>
-                    <select id="division-select" class="input-select">
-                        <option value="Algebra 1">Algebra 1</option>
-                        <option value="Geometry">Geometry</option>
-                        <option value="Algebra 2">Algebra 2</option>
-                        <option value="Precalculus">Precalculus</option>
-                        <option value="Calculus">Calculus</option>
-                        <option value="Statistics">Statistics</option>
-                    </select>
-                </div>
+    <!-- Home -->
+    <section id="home-sec" class="view-section active" aria-labelledby="home-title">
+      <div class="card center-content">
+        <h2 id="home-title">Sharpen your competition math</h2>
+        <p>Timed, competition-style problems across six divisions — with full worked explanations after every question.</p>
+        <button id="btn-to-setup" class="btn-primary btn-large">Start training</button>
+      </div>
+    </section>
 
-                <div class="form-group toggle-group">
-                    <label for="timer-toggle">Enable 2-Minute Timer:</label>
-                    <label class="switch">
-                        <input type="checkbox" id="timer-toggle">
-                        <span class="slider"></span>
-                    </label>
-                </div>
+    <!-- Setup -->
+    <section id="setup-sec" class="view-section hidden" aria-labelledby="setup-title">
+      <div class="card center-content">
+        <h2 id="setup-title">Configure your session</h2>
 
-                <button id="btn-start-quiz" class="btn-primary">Start Quiz</button>
-            </div>
-        </section>
+        <div class="form-group">
+          <label for="division-select">Division</label>
+          <select id="division-select" class="input-select">
+            <option value="Algebra 1">Algebra 1</option>
+            <option value="Geometry">Geometry</option>
+            <option value="Algebra 2">Algebra 2</option>
+            <option value="Precalculus">Precalculus</option>
+            <option value="Calculus">Calculus</option>
+            <option value="Statistics">Statistics</option>
+          </select>
+        </div>
 
-        <section id="quiz-sec" class="view-section hidden">
-            <div class="quiz-header">
-                <span id="quiz-division-label" class="badge">Algebra 1</span>
-                <span id="quiz-timer" class="timer hidden">02:00</span>
-            </div>
+        <div class="form-group toggle-group">
+          <label for="timer-toggle">2-minute timer per question</label>
+          <label class="switch">
+            <input type="checkbox" id="timer-toggle">
+            <span class="slider"></span>
+          </label>
+        </div>
 
-            <div class="card">
-                <h3 id="question-number">Question 1</h3>
-                <p id="question-text">Loading question...</p>
-                
-                <div id="options-container" class="options-grid">
-                    </div>
+        <button id="btn-start-quiz" class="btn-primary">Begin quiz</button>
+      </div>
+    </section>
 
-                <div id="feedback-container" class="feedback-box hidden">
-                    <h4 id="feedback-title">Correct!</h4>
-                    <p id="feedback-correct-ans"><strong>Answer:</strong> </p>
-                    <div class="explanation">
-                        <p id="feedback-explanation">Explanation goes here.</p>
-                    </div>
-                </div>
+    <!-- Quiz -->
+    <section id="quiz-sec" class="view-section hidden" aria-labelledby="question-text">
+      <div class="quiz-header">
+        <span id="quiz-division-label" class="badge">Algebra 1</span>
+        <span id="quiz-timer" class="timer hidden" role="timer" aria-live="off">02:00</span>
+      </div>
 
-                <div class="quiz-actions">
-                    <button id="btn-submit" class="btn-primary">Submit</button>
-                </div>
-            </div>
-        </section>
+      <div id="progress-track" class="progress-track" aria-hidden="true"></div>
 
-        <section id="results-sec" class="view-section hidden">
-            <div class="card center-content">
-                <h2>Training Complete!</h2>
-                <div class="score-display">
-                    <span id="final-score" class="score-text">0 / 3</span>
-                    <span id="final-accuracy" class="accuracy-text">0% Accuracy</span>
-                </div>
-                <div class="button-group">
-                    <button id="btn-retry" class="btn-primary">Retry Division</button>
-                    <button id="btn-home" class="btn-secondary">Back to Home</button>
-                </div>
-            </div>
-        </section>
+      <div class="card">
+        <p id="question-number">Question 1</p>
+        <p id="question-text">Loading question…</p>
 
-    </div>
+        <div id="options-container" class="options-grid" role="group" aria-label="Answer choices"></div>
 
-    <script src="script.js"></script>
+        <div id="feedback-container" class="feedback-box hidden" role="status" aria-live="polite">
+          <h4 id="feedback-title">Correct</h4>
+          <p id="feedback-correct-ans"><strong>Correct answer:</strong> </p>
+          <div class="explanation">
+            <p id="feedback-explanation">Explanation goes here.</p>
+          </div>
+        </div>
+
+        <div class="quiz-actions">
+          <button id="btn-submit" class="btn-primary" disabled>Check answer</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section id="results-sec" class="view-section hidden" aria-labelledby="results-title">
+      <div class="card center-content">
+        <h2 id="results-title">Session complete</h2>
+        <div class="score-display">
+          <span id="final-score" class="score-text">0 / 5</span>
+          <span id="final-accuracy" class="accuracy-text">0% accuracy</span>
+        </div>
+        <p id="best-note" class="best-note"></p>
+
+        <div id="review" class="review"></div>
+
+        <div class="button-group">
+          <button id="btn-retry" class="btn-primary">Try again</button>
+          <button id="btn-home" class="btn-secondary">Back to home</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
